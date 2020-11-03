@@ -4373,7 +4373,7 @@ class Compiler
         foreach ($args as $arg) {
             list($key, $value) = $arg;
 
-            $key = $key[1];
+            $key = $key[1] ?? null;
 
             if (empty($key)) {
                 $posArgs[] = empty($arg[2]) ? $value : $arg;
